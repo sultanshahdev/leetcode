@@ -1,18 +1,22 @@
 public class Solution {
-    public int[] twoSum(int[] nums, int target) {
-
-        Map<Integer,Integer> hm = new HashMap<>();
-
+    public int[] twoSum(int[] arr, int target) 
+    {
+        int k=0;
+        int[] temp=new int[2];
         for(int i=0;i<arr.length;i++)
         {
-            hm.put(arr[i],i);
+            for(int j=i+1;j<arr.length;j++)
+            {
+                if(arr[i]+arr[j]==target)
+                {
+                    temp[k++]=i;
+                    temp[k]=j;
+                    return temp;
+                }
+            }
         }
+        return temp;
 
-        for(int i=0;i<hm.size();i++)
-        {
-            int elementToBeFound = target-hm.get(i);
-            if(hm.contains(elementToBeFound) && hm.compu)
-        }
         
     }
 }
